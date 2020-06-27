@@ -37,8 +37,8 @@ class User(AbstractBaseUser):
     full_name = models.CharField(max_length=255, blank=True, null=True)
     uuid = models.UUIDField(default=uuid.uuid4, editable=False)
     active = models.BooleanField(default=True)
-    staff = models.BooleanField(default=True)
-    admin = models.BooleanField(default=True)
+    staff = models.BooleanField(default=False)
+    admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
